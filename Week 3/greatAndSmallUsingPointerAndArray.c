@@ -11,11 +11,11 @@ void main(){
 	printf("Enter a number: ");
 	scanf("%d",&arr[i]);
 	}
-	int *grtSml = check(&arr);
+	int *grtSml = check(arr);
 	printf(" Greatest : %d \n Smallest: %d",grtSml[0],grtSml[1]);
 }
 
-int check(int *arr2){
+int check(int arr2[3]){
 	int i;
 	int greatest = arr2[0],smallest = arr2[0];
 	for(i=0;i<3;i++){
