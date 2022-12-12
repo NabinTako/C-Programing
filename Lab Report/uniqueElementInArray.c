@@ -17,7 +17,6 @@ void main(){
               {
                   skip=1;
               }
-                
             }
 		}
 		if(skip==0){
