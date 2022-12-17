@@ -32,7 +32,6 @@ void findMidPoint(int x1,int x2,int y1,int y2){
 }
 
 
-// Write a function that takes two integers as arguments and return the greatest among them.
 
 int greatest(int x, int y){
 	if(x > y){
