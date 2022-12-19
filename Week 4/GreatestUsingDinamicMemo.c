@@ -14,7 +14,7 @@ void main(){
 	int *greatest = ptr_int; 
 	for(i=0;i<size;i++){
 		if(*greatest < *(ptr_int + i)){
-			*greatest = (ptr_int + i);
+			*greatest = *(ptr_int + i);
 		}
 	}
 	printf("Greatest element: %d",*greatest);
