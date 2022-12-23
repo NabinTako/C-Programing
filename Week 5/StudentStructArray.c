@@ -1,7 +1,3 @@
-//Create a structure named student that has a name, roll number and marks as members. Assume
-//appropriate types and size of members. Use this structure to read and display records of 10
-//students. Create two functions: One is to read information of students and other to display the
-//information.
 /* Create a structure named student that has a name, roll number and marks as
 members. Assume appropriate types and size of members. Use this structure to
 read and display records of 10 students. Create two functions: One is to read
@@ -16,10 +12,9 @@ struct student{
 };
 struct student* read();
 void print();
-int size=2;
+int size=10;
 void main() {
-	int i;
-	 struct student S[size];
+	struct student S[size];
 	print(read(S));
 }
 struct student* read(struct student s[size]){

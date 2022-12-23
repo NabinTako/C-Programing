@@ -23,6 +23,7 @@ void main(){
 		printf("roll number: ");scanf("%d",&std[i].roll_no);
 		printf("marks: ");scanf("%d",&std[i].marks);
 	}
+	printf("informations: \n");
 	for(i=0;i<3;i++){	
 	printf("name: %s\n",std[i].stdInfo.name);
 	printf("age: %d\n",std[i].stdInfo.age);
