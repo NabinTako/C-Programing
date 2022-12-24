@@ -1,8 +1,3 @@
-/* Create a structure named Employee having members name, salary and hours of
-work per day. Now, write a program to dynamically create an ‘n’ number of
-structures of type Employee. Pass this array of structure to a function that prints
-the highest salary of the employee. */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,10 +7,11 @@ struct Employee
     char post[50];
     int salary;
 };
-struct Employee *Check(struct Employee *emp,int number);
+struct Employee *Check(struct Employee *emp);
 int main()
 {
     struct Employee emp[10];
+    struct Employee *richEmp = calloc(10 , sizeof(struct Employee));
     int number = 0,i;
     for ( i = 0; i < 10; i++)
     {
@@ -34,8 +30,7 @@ int main()
             number++;
         }
     }
-    struct Employee *richEmp = calloc(number , sizeof(struct Employee));
-    richEmp = Check(emp,number);
+    richEmp = Check(emp);
     printf("Employee with 10k above salary:\n");
     for ( i = 0; i < number; i++){
         printf("Name: %s\n", richEmp[i].name);
@@ -46,9 +41,9 @@ int main()
     return 0;
 }
 
-struct Employee *Check(struct Employee *emp,int number)
+struct Employee *Check(struct Employee *emp)
 {
-    struct Employee *richEmp = calloc(number , sizeof(struct Employee));
+    struct Employee *richEmp = calloc(10 , sizeof(struct Employee));
     int above10K=0,i;
     for ( i = 0; i < 10; i++)
     {
