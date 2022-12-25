@@ -1,0 +1,17 @@
+Info on 5 employees
+Name: nabin
+Age: 2
+Salary: 2
+Name: sakar
+Age: 3
+Salary: 3
+Name: prayush
+Age: 4
+Salary: 4
+Name: naima
+Age: 5
+Salary: 5
+Name: muskan
+Age: 6
+Salary: 6
+ÿ

@@ -19,7 +19,6 @@ printf("Error creating file %s\n", filename);
 exit(-1);
 
 }
-
 else {
 
 printf("Success creating file %s\n",filename);
