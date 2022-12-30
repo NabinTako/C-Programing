@@ -12,7 +12,7 @@ struct student{
 };
 struct student* read();
 void print();
-int size=10;
+int size=2;
 void main() {
 	struct student S[size];
 	print(read(S));
