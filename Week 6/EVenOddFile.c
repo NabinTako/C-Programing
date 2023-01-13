@@ -3,7 +3,6 @@ reading the data write all the odd numbers to a file named odd.txt and all the
 even numbers to file even.txt. */
 
 #include <stdio.h>
-#include <stdlib.h>
 void main(){
 	int num;
 	char ch;
@@ -11,13 +10,9 @@ void main(){
 	FILE * fptr = fopen("odd.txt","w");
 	FILE * fptr1 = fopen("even.txt","w");
 	
-	if(fptr == NULL){
+	if(fptr == NULL || fptr1 == NULL){
 		printf("Cannot find the file.");
 		
-		exit(-1);
-	}
-	if(fptr1 == NULL){
-		printf("Cannot find the file.");
 		exit(-1);
 	}
 	do{

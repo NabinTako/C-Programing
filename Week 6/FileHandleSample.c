@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-#include <stdlib.h>
 
 void main()
 
@@ -8,9 +7,9 @@ void main()
 
 FILE *fptr;
 
-char filename[]= "file01.txt";
-
-fptr = fopen(filename,"a+");
+char filename[]= "employee.txt";
+char ch;
+fptr = fopen(filename,"r");
 
 if (fptr == NULL) {
 
@@ -21,15 +20,11 @@ exit(-1);
 }
 else {
 
-printf("Success creating file %s\n",filename);
-char x[100];
-fgets(x,100,fptr);
-printf ("%s \n\n",x);
-fprintf(fptr,"hello from here again");
-fgets(x,100,fptr);
-printf ("%s \n",x);
-
+//printf("Success creating file %s\n",filename);
+do{
+	ch = fgetc(fptr);
+	printf("%c",ch);
+	}while(ch != EOF);
 }
-
 fclose(fptr);
 }

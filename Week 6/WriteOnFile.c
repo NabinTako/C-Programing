@@ -23,13 +23,11 @@ void main(){
 
 	exit(-1);
 	}
+	fprintf(fptr,"Info on 5 employees\n");
 	for(i=0;i<5;i++){
 		printf("name: ");scanf("%s",emp[i].empName);
 		printf("age: ");scanf("%d",&emp[i].age);
 		printf("salary: ");scanf("%d",&emp[i].salary);
-	}
-	fprintf(fptr,"Info on 5 employees\n");
-	for(i=0;i<5;i++){
 		fprintf(fptr,"Name: %s\n",emp[i].empName);
 		fprintf(fptr,"Age: %d\n",emp[i].age);
 		fprintf(fptr,"Salary: %d\n",emp[i].salary);
