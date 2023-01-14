@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "lodepng.h"
 
 int main()
@@ -12,14 +13,15 @@ int main()
     {
         printf("%u : %s\n", error, lodepng_error_text(error));
     }
-    // Workshop Question 1
+    int red, green, blue;
 
     for (int i = 0; i < width * height * 4; i = i + 4)
     {
-        img[i] = 255 - img[i];
-        img[i + 1] = 255 - img[i + 1];
-        img[i + 2] = 255 - img[i + 2];
+        int gray = (img[i] + img[i + 1] + img[i + 2]) / 3;
+        img[i] = gray;
+        img[i + 1] = gray;
+        img[i + 2] = gray;
     }
-    lodepng_encode32_file("-VE Naruto.png", img, width, height);
+    lodepng_encode32_file("grayScaleNaruto.png", img, width, height);
     free(img);
 }

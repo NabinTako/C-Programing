@@ -14,10 +14,11 @@ int main()
         printf("%u : %s\n", error, lodepng_error_text(error));
     }
     // workshop Q2
-    int red, green, blue, alpha;
-    for (int i = 0; i < height; i = i++)
+    int red, green, blue;
+    int i, j;
+    for (i = 0; i < height; i = i++)
     { // for row //for row takes one pixel 0,1,2,3
-        for (int j = 0; j < width; j = j++)
+        for (j = 0; j < width; j = j++)
         {                                           // for column //for column takes the other pixels which starts form 4
             red = img[4 * width * i + 4 * j];       // index[0]
             green = img[4 * width * i + 4 * j + 1]; // index[1]
@@ -27,9 +28,9 @@ int main()
             int gray = (red + green + blue) / 3;
 
             // assigning the new values to rgb
-            // red = gray;
-            // green = gray;
-            // blue = gray;
+            red = gray;
+            green = gray;
+            blue = gray;
 
             // re-assigning the new value of rgb for grayscale of the image
             img[4 * width * i + 4 * j + 0] = gray;
