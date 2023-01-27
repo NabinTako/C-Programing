@@ -13,15 +13,18 @@ int main()
     {
         printf("%u : %s\n", error, lodepng_error_text(error));
     }
-    int red, green, blue;
-
-    for (int i = 0; i < width * height * 4; i = i + 4)
+    else
     {
-        int gray = (img[i] + img[i + 1] + img[i + 2]) / 3;
-        img[i] = gray;
-        img[i + 1] = gray;
-        img[i + 2] = gray;
+        int red, green, blue;
+
+        for (int i = 0; i < width * height * 4; i = i + 4)
+        {
+            int gray = (img[i] + img[i + 1] + img[i + 2]) / 3;
+            img[i] = gray;
+            img[i + 1] = gray;
+            img[i + 2] = gray;
+        }
+        lodepng_encode32_file("grayScaleNaruto.png", img, width, height);
+        free(img);
     }
-    lodepng_encode32_file("grayScaleNaruto.png", img, width, height);
-    free(img);
 }

@@ -26,7 +26,7 @@ void *display(void *p)
 void main()
 {
     int num_thread;
-    int limit = 1000;
+    int limit = 12;
     printf("No of threads: ");
     scanf("%d", &num_thread);
     int size = limit / num_thread;

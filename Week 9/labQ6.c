@@ -24,7 +24,7 @@ void *display(void *p)
         if (i == numToFind)
         {
             printf("Thread %d: %d\n", var->thread_id, i);
-            printf("On index %d in the array\n", i - 1);
+            printf("Index %d in the array\n", i - 1);
             isfound = 1;
             pthread_exit(NULL);
         }
@@ -33,12 +33,15 @@ void *display(void *p)
 
 void main()
 {
-    int num_thread = 2;
+    int num_thread;
+    printf("Threads to use: ");
+    scanf("%d", &num_thread);
+    printf("Number to be found: ");
+    scanf("%d", &numToFind);
     int limit = sizeof(elements) / sizeof(int);
     int size = limit / num_thread;
     pthread_t thread[num_thread];
     struct info threads[num_thread];
-    scanf("%d", &numToFind);
     for (int i = 0; i < num_thread; i++)
     {
         threads[i].thread_id = i + 1;
